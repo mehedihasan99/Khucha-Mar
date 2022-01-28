@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --primary-color: #606d5f;
+    --secondary-color: #888888;
+}
+body{
+    font-family: 'Poppins',
+    sans-serif;
+}
+.container{
+    width: 70%;
+    margin: 0 auto;
+}
+.main-link{
+    border: 0;
+    padding: 15px 30px;
+    border-radius: 15px;
+    font-size: 20px;
+    color: var(--secondary-color);
+}
+.main-heading{
+    text-align: center;
+    font-weight: 700;
+    font-size: 50px;
+    margin-bottom: 40px;
+    color: var(--secondary-color);
+}
+/* nav style */
+.nav-bar{
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo h1 {
+    font-weight: 700;
+    font-size: 30px;
+    color: var(--primary-color);
+}
+.nav-item a{
+    text-decoration: none;
+    font-size: 20px;
+    color: var(--secondary-color);
+    margin-left: 30px;
+}
+/* hero-banner */
+.hero-banner{
+    display: flex;
+    
+}
+.hero-img {
+    width: 55%;
+    margin-left: 60px;
+}
+.hero-img img{
+    width: 100%;
+}
+.hero-banner {
+    margin: 115px 0;
+}
+.hero-details{
+    width: 45%;
+    
+}
+.hero-details h1{
+    font-size: 50px;
+    line-height: 1.1;
+    color: var(--primary-color);
+}
+.hero-details p{
+    font-size: 18px;
+    color: var(--secondary-color);
+    margin: 30px 0;
+}
+/* product style */
+.product-section{
+    margin-bottom: 115px;
+}
+.product-group{
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+column-gap: 50px;
+row-gap: 30px;
+}
+.product-item{
+    background-color: #F0F0F0;
+    text-align: center;
+    padding: 30px 10px;
+
+    border-radius: 15px;
+}
+.product-item-img{
+    border-radius: 100px;
+}
+.product-item img{
+    width: 50%;
+    border-radius: 100px;
+}
+.product-item h3{
+    font-size: 22px;
+    font-weight: 750;
+color: var(--secondary-color);
+}
+.product-btn{
+    border: 0;
+    background-color: white;
+    padding: 10px 25px;
+    border-radius: 10px;
+}
+/* service style */
+.service-section{
+    
+}
+.service-group{
+    display: grid;
+    text-align: center;
+    column-gap: 80px;
+    row-gap: 40px;
+    grid-template-columns: repeat(3, 1fr);
+}
+.service-item h3{
+    font-size: 22px;
+    margin: 10px 0;
+    font-weight: 750;
+    color: var(--secondary-color);
+}
+.service-item-img img{
+    width: 50%;
+}
+.service-item p{
+    color: var(--secondary-color);
+}
+/* footer style*/
+.footer-part{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 115px;
+    background-color: #F0F0F0;
+    color: var(--secondary-color);
+    height: 50px;
+}
+
+/* media query */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+.logo h1 {
+    font-size: 13px; 
+}
+.nav-item a {
+    font-size: 12px;
+    margin-left:0;
+    margin-right: 5px;
+}
+    .hero-banner{
+        flex-direction: column;
+        align-items: center;
+        margin: 40px 0;
+    }
+    .hero-details {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .hero-img {
+     width: 100%;
+     margin-left:0;
+        
+    }
+    .hero-details h1 {
+        font-size: 30px;
+        
+    }
+    .hero-details p {
+        margin: 15px 0;
+    }
+    .product-group,
+    .service-group {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .main-heading {
+        font-size: 23px;
+    }
+    .footer-part p{
+        font-size: 13px;
+    }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width:992px) {
+     .hero-banner {
+         flex-direction: column;
+         align-items: center;
+         margin: 40px 0;
+     }
+      .hero-details {
+          width: 100%;
+          margin-bottom: 30px;
+      }
+
+      .hero-img {
+          width: 100%;
+          margin-left: 0;
+
+      }
+      .product-group,
+      .service-group {
+          grid-template-columns: repeat(2, 1fr);
+      }
+}
+@media only screen and (min-width:992px){
+     .service-group {
+         grid-template-columns: repeat(4, 1fr);
+         column-gap: 20px;
+         row-gap: 10px;
+     }
+}
